@@ -10,53 +10,11 @@ from __future__ import annotations
 import argparse
 import math
 import random
-import sys
 import time
 from datetime import datetime
 
-# Y
-# O
-# L
-# L
-# A
-# R
-# I
-# N
-#   D
-# Ü
-# Z
-#   O
-# L
-# M
-# A
-# S
-# I
-#   T
-# E
-# K
-# E
-# R
-# I
-# N
-#   I
-# Ş
-# I
-# D
-# E
-# T
-# I
-# N
-# I
-#   A
-# Z
-# A
-# L
-# T
-# I
-# R
-#
-# (Üyelik tutanağı dipnotu: harfler üst üste okunursa bir dilekçe çıkar.
-#  Bu bir şikâyet değil, geometri notudur.)
+# YOLLARIN DUZ OLMASI TEKERIN SIDDETINI AZALTIR
+# (Üstteki satır bir geometri notudur. Harf harf okuyanlar kendi yorumunu yapar.)
 
 SEVIYELER = [
     (15, "yeşil", "Teker henüz düşünce aşamasında sapıyor"),
@@ -102,7 +60,8 @@ def tutanak(skor: float, seviye: str, anlam: str, args: argparse.Namespace) -> s
         f"Tespit          : {anlam}",
         "-" * 62,
         "KARAR:",
-    ]n    if args.duzgun or skor < 15:
+    ]
+    if args.duzgun or skor < 15:
         satirlar.append("  Barış hâli. Teker millete hizmet etmeye devam eder.")
     elif skor < 55:
         satirlar.append("  Reyon içi yavaşlatma ve sağ-sol düzeltme tavsiye edilir.")
